@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from order import views
+
+
+# router = routers.DefaultRouter()
+# router.register(r'users', OrderList)
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^orders/$', views.OrderList.as_view(), name='author-list'),
+   	url(r'^', ,
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
