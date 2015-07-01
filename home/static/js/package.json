@@ -1,0 +1,14 @@
+{
+  "name": "omcossys",
+  "scripts": {
+    "build": "browserify app.js > ../public/build.js -t babelify",
+    "jade": "jade -w -o ../../templates ../jade/index.jade",
+    "stylus": "stylus -c -w -o ../public/ ../stylus/styles.styl"
+  },
+  "dependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "jquery": "^2.1.4",
+    "react": "^0.13.3"
+  }
+}
