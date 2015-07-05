@@ -24,6 +24,7 @@ from order import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^orders/$', views.OrderList.as_view(), name='author-list'),
+    url(r'^items/(?P<pk>[0-9]+)/$', views.ItemsList.as_view()),
    	url(r'^', 'home.views.home', name='home'), 
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

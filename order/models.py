@@ -34,7 +34,7 @@ class Items(models.Model):
 	code = models.CharField(max_length=50)
 	date = models.DateField(blank=True, null=True)
 	invoice = models.ForeignKey(Invoice, blank=True, null=True)
-	weight = models.DecimalField(max_digits=7, decimal_places=2, blank=True)
+	weight = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True)
 	tracking = models.URLField(max_length=500, blank=True)
 	note = models.TextField(blank=True, null=True)
 

@@ -3,17 +3,17 @@
  */
 
 import React from 'react';
+import OrderMap from './OrderMap'
+
 
 export default class OrderList extends React.Component {
 	render() {
-	 return <tr className = 'order-list'>
-			<td>{this.props.orders.order_id}</td>
-			<td>{this.props.orders.customer}</td>
-			<td>{this.props.orders.date}</td>
-			<td>{this.props.orders.date_due}</td>
-			<td>{this.props.orders.weight}</td>
-			<td>{this.props.orders.amount} $</td>
-			<td>{this.props.orders.state}</td> 
-		</tr>
-	}
+	return <table>
+	{
+	this.props.orders.map((order) => {
+		return <OrderMap key={this.props.key} order={order}/>	
+	})	
+	}	
+	</table>
+}	
 }
