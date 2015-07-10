@@ -2,14 +2,13 @@ from django.contrib.auth.models import User
 from order.serializers import OrderSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAdminUser
 from .models import *
 
-class OrderList(generics.ListCreateAPIView):
+class OrderList(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
-    permission_classes = (IsAdminUser,)
     paginate_by = 100
 
 class ItemsList(APIView):

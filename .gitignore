@@ -1,4 +1,5 @@
 # first line must not contain any rules
+/Frontend/js/node_modules/*
 *.pyc
 settings.py
 settings.pyc
