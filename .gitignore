@@ -1,5 +1,5 @@
 # first line must not contain any rules
-Frontend/js/node_modules/*
+/Frontend/js/node_modules/*
 *.pyc
 build.js
 settings.py
