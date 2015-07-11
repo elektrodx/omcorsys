@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import *
 from customer.models import Customer
+import django_filters
 
 class OrderSerializer(serializers.ModelSerializer):
 	customer = serializers.CharField(read_only=True)
